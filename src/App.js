@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import Employee from './components/employee.js'
 import { useState } from 'react';
 
@@ -8,7 +8,7 @@ const showEmployee =true;
 const[jrole,setjrole] = useState('not set')
 const[mrole,setmrole] = useState('not set')
   return (
-    <div className="App"> 
+    <div className="App bg-red-300"> 
     {showEmployee ? (
       <>
       <Employee name = "Haile" role= "Friend" />
