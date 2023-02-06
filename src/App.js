@@ -3,26 +3,22 @@ import Employee from './components/employee.js'
 import { useState } from 'react';
 
 function App() {
-  console.log("What a day to learn with caleb")
-  const showEmployee = true;
-  const [role, setrole] = useState('dev')
-  const [yrole,setyrole] = useState('CEO')
+console.log("you know how we do")
+const showEmployee =true;
+const[jrole,setjrole] = useState('not set')
+const[mrole,setmrole] = useState('not set')
   return (
     <div className="App"> 
-     {showEmployee ? (
+    {showEmployee ? (
       <>
-     <input type = 'text' onChange={(e)=> setrole(e.target.value)}/>
-
-
-      <Employee name= "Haile" role ="friend" />
-      <Employee name= "Mekdi" role = {role}/>
-    <input type = 'text' onChange ={(e)=> setyrole(e.target.value) }/>
-      <Employee name = "Yared" role={yrole} />
+      <Employee name = "Haile" role= "Friend" />
+      <input type='text' onChange={(e)=>setjrole(e.target.value)} />
+      
+      <Employee name = "John" role={jrole}/>
+      <input type='text' onChange={(e)=>setmrole(e.target.value)} />
+      <Employee name = "Mekdi" role={mrole}/>
       </>
-     ):(
-      <>
-      <p>You ain't seeing no goddamn employees</p></>
-     )}
+    ):"You ain't getting no employees"}
     </div>
   );
 }

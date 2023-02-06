@@ -1,10 +1,10 @@
-function Employee(props){
-    return(
+function Employee (props){
+    return (
         <>
-        <h3>Your employee is {props.name}</h3>
-        <p>Their role is {props.role ? props.role : "They ain't got no role"}</p>
+        <h3>Your employee name is {props.name}</h3>
+        <p>with a role of {props.role ? props.role : "They ain't got nothing to do"}</p>      
         </>
     )
-}
 
+}
 export default Employee;
