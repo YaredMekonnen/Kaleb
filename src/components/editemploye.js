@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Editemployee(props) {
@@ -57,7 +56,7 @@ function Editemployee(props) {
                     id="role" 
                     type="text" 
                     value={role}
-                    onChange={(e)=>{setrole(e.target.role)}}/>
+                    onChange={(e)=>{setrole(e.target.value)}}/>
             </div>
             </div>
 

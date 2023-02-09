@@ -6,8 +6,6 @@ import {v4 as uuidv4} from 'uuid'
 function App() {
 console.log("You Know What we doing")
 const showEmployee = true
-const [yrole,setyrole] = useState("Dev")
-const [mrole,setmrole] = useState("wife")
 const [employees,setemployess] = useState([
   {
     id:1,
@@ -54,8 +52,6 @@ function updateEmployee(id,newName,newRole){
     <div className="App">
      {showEmployee ? (
      <>
-     <input type='text' onChange={(e)=>setyrole(e.target.value)} />
-     <input type='text' onChange={(e)=>setmrole(e.target.value)} />
      <div className='flex flex-wrap justify-center'>
         {employees.map((employee)=>{
           return(<Employee key={employee.id}
