@@ -2,6 +2,7 @@ import './index.css';
 import Employee from './components/employee'
 import {useState} from 'react'
 import {v4 as uuidv4} from 'uuid'
+import Addemployee from './components/addemployee';
 
 function App() {
 console.log("You Know What we doing")
@@ -36,7 +37,7 @@ const [employees,setemployess] = useState([
     name:'Yada',
     role:'CEO',
     img:'https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg'
-  },
+  }
 ])
 
 function updateEmployee(id,newName,newRole){
@@ -47,6 +48,19 @@ function updateEmployee(id,newName,newRole){
     return employee;
    })
    setemployess(updated);
+}
+
+
+function addEmployee(name,role,img){
+ const newemployee = {
+  id: uuidv4(),
+  name: name,
+  role: role,
+  img: img
+ }
+
+setemployess([...employees,newemployee])
+
 }
   return (
     <div className="App">
@@ -64,6 +78,7 @@ function updateEmployee(id,newName,newRole){
         })}
         {console.log(uuidv4())}
       </div>
+      <Addemployee addEmployee={addEmployee}/>
       </>
      ):"You ain't seeing no employee"}
     </div>
